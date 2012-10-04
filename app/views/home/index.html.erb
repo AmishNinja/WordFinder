@@ -1,0 +1,6 @@
+<h1>Word Count</h1>
+Give me a site to count words from!
+<% form_tag("/crawl", :method => "post") do %>
+	<%= text_field_tag(:site) %>
+	<%= submit_tag("Go") %>
+<% end %>
