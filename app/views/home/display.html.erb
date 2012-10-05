@@ -1,1 +1,4 @@
-<%= @output %>
+<% @words.each do |word| %>
+The word "<%= word.name %>" appears <%= word.count %> times.
+<br>
+<% end %>
