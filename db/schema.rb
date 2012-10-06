@@ -9,13 +9,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121004012510) do
+ActiveRecord::Schema.define(:version => 20121006231800) do
+
+  create_table "sites", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "words", :force => true do |t|
     t.string   "name"
     t.integer  "count"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "site_id"
   end
 
 end

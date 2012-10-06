@@ -1,5 +1,7 @@
+<%= stylesheet_link_tag "main" %>
 <h1>Word Count</h1>
 Give me a site to count words from!
+<p id="notice" class="error"><%= flash[:notice] %></p>
 <% form_tag("/crawl", :method => "post") do %>
 	<%= text_field_tag(:site) %>
 	<%= submit_tag("Go") %>
