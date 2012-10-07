@@ -61,7 +61,4 @@ class HomeController < ApplicationController
   def display
   end
 
-  def test
-  end
-
 end
