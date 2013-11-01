@@ -34,6 +34,7 @@ class HomeController < ApplicationController
 	doc = Nokogiri::HTML(open(url))
   	doc.css('script').remove
   	doc.xpath("//@*[starts-with(name(), 'on')]").remove
+  	doc.xpath('//@style').remove
 	urlString = doc.xpath("//text()").to_s
 	urlString = urlString.gsub(/[^A-Za-z].-/, ' ')
   	return urlString.split(" ")
